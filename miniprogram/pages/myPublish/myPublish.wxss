@@ -1,0 +1,12 @@
+/* pages/myPublish/myPublsh.wxss */
+
+#delete{
+  /* fied相对于整个页面 */
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}
+button{
+  background-color: #92B6D5;
+  color:white;
+}

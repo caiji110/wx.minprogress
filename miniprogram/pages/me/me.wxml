@@ -1,0 +1,64 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUser && canIUse}}" bindtap="getinfo" > 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userimg}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class="tool">
+  <view bindtap="toPublish">
+    <image src="../../iconImg/我要发布.png" class="leftIcon" mode="aspectFill"></image>
+    <text>我要发布</text>
+    <image src="../../iconImg/enter.png" class="enterIcon"></image>
+  </view>
+  <view bindtap="myPublish">
+    <image src="../../iconImg/我的发布2.png" class="leftIcon" mode="aspectFill"></image>
+    <text>我的发布</text>
+    <image src="../../iconImg/enter.png" class="enterIcon"></image>
+  </view>
+  <view bindtap="myLove">
+    <image src="../../iconImg/love1.png" class="leftIcon"></image>
+    <text>我的收藏</text>
+    <image src="../../iconImg/enter.png" class="enterIcon"></image>
+  </view>
+  <view >
+    <image src="../../iconImg/scan1.png" class="leftIcon"></image>
+    <navigator url="../myscan/scan"> 
+      <text>我的浏览</text>
+    </navigator>
+    <image src="../../iconImg/enter.png" class="enterIcon"></image>
+  </view>
+  <view wx:if="{{!administer}}" bindtap = "secretkey">
+    <image src="../../iconImg/secretkey(1).png" class="leftIcon"></image>
+    <text>密匙认证</text>
+    <image src="../../iconImg/enter.png" class="enterIcon"></image>
+  </view>
+  <view  wx:if="{{administer}}">
+    <view bindtap="QRcode">
+    <image src="../../iconImg/more.png" class="leftIcon" mode="center"></image>
+    <text>引流管理</text>
+    <image src="../../iconImg/enter.png" class="enterIcon"></image>
+  </view>
+  <view bindtap="byebye" class="more">
+    <image src="../../iconImg/more.png" class="leftIcon" mode="center"></image>
+    <text>后台管理</text>
+    <image src="../../iconImg/enter.png" class="enterIcon"></image>
+  </view>
+  
+
+  </view>
+ 
+</view>
+<view class="secretbox" wx:if="{{showsecret}}">
+
+      <input type="text" model:value = "{{secretkey}}" placeholder="请输入密匙"/>
+   
+    <view class="btnbox">
+      <button class="btn" bindtap="btnconfirm" >确认</button>
+    <button class="btn" bindtap="btncancel">取消</button>
+    </view>
+    
+  </view>

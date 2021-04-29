@@ -1,0 +1,25 @@
+<!--pages/show/show.wxml-->
+<import src="../temp/temp.wxml" />
+
+  <view class="topItems">
+    <view class="location" bindtap="chooseLocation">
+      <image src="../../iconImg/地区.png" mode="widthFix"></image>
+      {{region[0]}}
+    </view>
+    <view class="search">
+      <image src="../../iconImg/搜索.png" mode=scaleToFill" style="width: 40rpx; height: 40rpx"></image>
+      <input placeholder='{{searchHolder}}' confirm-type="search" bindconfirm="confirm" bindinput="whenInput"
+        value="{{searchFor}}"></input>
+      <image src="../../iconImg/取消.png" mode="widthFix" bindtap="cancel" style="width:40rpx" hidden="{{!searchFor}}">
+      </image>
+    </view>
+  </view>
+
+  <view>
+    <background id="background" type="normal"></background>
+  </view>
+  
+
+  <view>
+    <data-feed id="feed"></data-feed>
+  </view>

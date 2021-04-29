@@ -1,0 +1,5 @@
+<!--pages/show/show.wxml-->
+<!-- 运用表单来搞删除 -->
+<scroll-view scroll-y>
+  <data-feed id="feed" bindtriggerLongTap="handleLongTap"></data-feed>
+</scroll-view>

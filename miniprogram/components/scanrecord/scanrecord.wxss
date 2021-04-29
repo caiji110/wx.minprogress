@@ -1,0 +1,58 @@
+/* components/scanrecord/scanrecord.wxss */
+/* miniprogram/pages/myscan/scan.wxss */
+image{
+
+  width: 230rpx;
+  height: 230rpx;
+}
+.img{
+  flex: 1;
+}
+.box{
+  vertical-align: text-bottom;
+  display: flex;
+  border-bottom: 2px solid #92B6D5;
+  background-color: rgba(211, 208, 208, 0.256);
+  margin: 30rpx 30rpx 10rpx 30rpx;
+}
+.content{
+  margin-left:50rpx ;
+ 
+}
+.right{
+  flex: 4;
+  
+}
+.content text{
+  display: -webkit-box;
+
+  overflow: hidden;
+  
+  text-overflow: ellipsis;
+  
+  word-wrap: break-word;
+  
+  white-space: normal !important;
+  
+  -webkit-line-clamp: 1;
+  
+  -webkit-box-orient: vertical;
+}
+.content view{
+  height: 190rpx;
+  color: rgba(88, 88, 88, 0.678);
+  font-size: 12px;
+  display: -webkit-box;
+
+  overflow: hidden;
+  
+  text-overflow: ellipsis;
+  
+  word-wrap: break-word;
+  
+  white-space: normal !important;
+  
+  -webkit-line-clamp: 5;
+  
+  -webkit-box-orient: vertical;
+}

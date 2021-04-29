@@ -1,0 +1,9 @@
+<!--components/inputcpm/inputcode.wxml-->
+<form bindsubmit="datasubmit">
+  <input type="text" name = "namevalue" placeholder="请输入渠道名称"/>
+  <input type="text" name = "remarksvalue" placeholder="请输入备注"/>
+  <button class="btn"  form-type="submit">点击提交生成对应的二维码</button>
+
+</form>
+
+<image bindtap="saveimg"  class="erwercode" mode="aspectFit" src="{{aa}}"></image>

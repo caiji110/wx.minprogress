@@ -1,0 +1,37 @@
+function indexOf(arr,id){
+  if (arr.indexOf(id) < 0) {
+      return false;
+  } else {
+      return true;
+  }
+}
+// 通过expor属性将indexof函数暴露出来
+module.exports.indexOf = indexOf;
+{/* <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+    <!-- <swiper-item>'miniprogram/test/1.JPG'
+      <image class="swiper_item" src="../../images/bgi1.jpg" mode="widthFix"></image>
+    </swiper-item> -->
+    <swiper-item>
+      <image class="swiper-item" src="../../test/3.JPG" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class="swiper-item" src="../../images/3 (2).jpg" mode="aspectFill"></image>
+    </swiper-item>
+
+  </swiper>
+  <!-- 分类 字体居中 -->
+  <view class="kind fontInsideCenter">
+    <view wx:for="{{kindArr}}" wx:item="item" wx:key="*this" class="kindItem" bindtap="selectKind" data-kind="{{item}}">
+      {{item}}</view>
+  </view>
+  <!-- 精选内容 -->
+  <view class="formalUnit feature " bindtap="toHightLight">
+    <image id="love" src="../../iconImg/love2.png" mode="widthFix"></image><text>精选资讯</text>
+    <view class="formal_img_container">
+      <!-- <view wx:for="{{featurePicArr}}" wx:item="item" wx:key="*this" class="formalImageSize">
+        附图
+        <image src="{{item}}"></image>
+      </view> -->
+    </view>
+  </view>
+  <!-- 注意要用唯一标识符 --> */}

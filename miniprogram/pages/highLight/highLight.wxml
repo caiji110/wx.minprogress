@@ -1,0 +1,6 @@
+<!--pages/highLight/highLight.wxml-->
+<scroll-view>
+<view>
+    <data-feed id="feed"></data-feed>
+  </view>
+</scroll-view>

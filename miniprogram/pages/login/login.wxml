@@ -1,0 +1,4 @@
+<!--pages/login/login.wxml-->
+<text>pages/login/login.wxml</text>
+<view>欢迎来到扫码页面</view>
+<view>页面会在加载后获取用户的openid去判断是不是新用户</view>

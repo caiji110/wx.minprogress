@@ -1,0 +1,58 @@
+<!--pages/temp/temp.wxml-->
+<text>pages/temp/temp.wxml</text>
+
+<wxs src="./random.wxs" module="random"></wxs>
+
+<template name="msgUnit">
+  <!-- formalUnit是用来确定长宽、间距、圆角 -->
+  <view class="showUnit formalUnit" bindlongtap="longTap" data-index="{{index}}">
+    <view class="showUnit_head">
+      <!-- 头像和信息 -->
+      <view style="display: flex;flex-direction: row;">
+        <image src="../../images/4.jpg" mode="scaleToFill"></image>
+        <view class="info">
+          <view class="title">{{title}}</view>
+          <view class="time fontInsideCenter">{{ifTop?'置顶':''}} {{timeVisual}}</view>
+        </view>
+      </view>
+      <view>
+        <view class="showUnit_contain_title fontInsideCenter">
+          <!-- 诚聘 -->
+          {{finished?'已完成':kind}}
+        </view>
+      </view>
+      <!-- 收藏 -->
+
+    </view>
+
+    <view class="showUnit_contain" bindtap="toDetail" data-index="{{index}}">
+      <!-- 内容 -->
+      <!-- 这个class决定会不会隐藏 -->
+      <view  class="{{ifDetail?'':'showUnit_contain_text_hidden'}}">
+        <!-- 主要文本 -->
+
+        <text user-select="true" >{{contain}}</text>
+
+      </view>
+
+      <view class=showUnit_contain_tap">
+        <!-- 点击全文 -->
+        <view wx:if="{{ifDetail}}">
+          <view> {{visualViews}}人看过</view>
+          <view wx:if="{{beloved.length}}"> {{beloved.length}}人收藏</view>
+        </view>
+        <view class="foot" wx:else>
+          <view class="{{ifFinished?'finished':''}}">查看全文</view>
+          <view wx:if="{{ifFinished}}">已完成</view>
+        </view>
+      </view>
+      <view class="formal_img_container">
+        <view bindtap="previewImg" wx:for="{{imgArr}}" wx:item="item" wx:key="*this" class="formalImageSize">
+          <!-- 附图 -->
+          <image src="{{item}}"></image>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</template>

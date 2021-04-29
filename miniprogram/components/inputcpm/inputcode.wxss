@@ -1,0 +1,21 @@
+/* components/inputcpm/inputcode.wxss */
+input{
+  border:1px  solid red;
+  width: 400rpx;
+  height: 20rpx;
+  margin: 50rpx 25%;
+}
+.erwercode{
+  width: 400rpx;
+  height: 400rpx;
+  border: 1px solid green;
+  margin-top: 100rpx;
+  margin-left:50%;
+  position: relative;
+  left: -200rpx;
+}
+.btn{
+  border: 1px solid black;
+  background-color: gray;
+  color: aliceblue;
+}

@@ -1,0 +1,58 @@
+{
+  "useExtendedLib": {
+    "weui": true
+  },
+  "usingComponents": {
+    "background": "./pages/background/background",
+    "data-feed": "./components/data-feed/data-feed",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet",
+    "mp-slideview": "weui-miniprogram/slideview/slideview"
+  },
+  "pages": [
+    "pages/me/me",
+    "pages/mylove/mylove",
+    "pages/myscan/scan",  
+    "pages/show/show",
+
+    "pages/index/index",
+    "pages/login/login",
+    "pages/background/background",
+    "pages/publish/publish",
+    "pages/highLight/highLight",
+    "pages/temp/temp",
+
+    "pages/myPublish/myPublish",
+    "pages/detail/detail"
+   
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8bbae4",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#92B6D5",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/show/show",
+        "text": "圈子",
+        "iconPath": "iconImg/pyq.png",
+        "selectedIconPath": "iconImg/pyq2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "iconImg/my.png",
+        "selectedIconPath": "iconImg/my2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

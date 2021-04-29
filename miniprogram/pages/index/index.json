@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "inputcode":"../../components/inputcpm/inputcode",
+    "outputdata":"../../components/outputcpm/outputcpm"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "data-feed": "../../components/data-feed/data-feed"
+
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "首页"
+}

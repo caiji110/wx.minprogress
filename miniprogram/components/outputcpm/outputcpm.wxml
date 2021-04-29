@@ -1,0 +1,11 @@
+<!--components/outputcpm/outputcpm.wxml-->
+<view class="tr">
+  <view class="td">{{cpmdata.date}}</view>
+
+    <image bindtap="save" data-id="{{cpmdata.fileID}}" class="td" src="{{cpmdata.fileID}}"  mode="aspectFit"></image>
+
+  <view class="td">{{cpmdata.namevalue}}</view>
+  <view class="td">{{cpmdata.remarksvalue}}</view>
+  <view class="td">扫码：{{cpmdata.scancode}}人；新用户：{{cpmdata.introducenum}}人</view>
+ 
+</view>

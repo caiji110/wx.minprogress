@@ -1,0 +1,120 @@
+/* pages/publish/publish.wxss */
+/* 默认view为flex容器 */
+view{
+  display: flex;
+
+}
+
+.input-placeholder	{
+ color:#777777;
+}
+.photoIcon{
+  width:150rpx;
+  height:150rpx;
+}
+.publishItem{
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20rpx;
+  height: 110rpx;
+  background: white;
+  font-size: 38rpx;
+  width: 100%;
+}
+
+
+.main{
+  /* padding-left: 20rpx; */
+  flex-direction: column;
+padding:15rpx 20rpx 15rpx 20rpx;
+  justify-content: flex-start; 
+  background: white;
+  font-size: 38rpx;
+}
+.main text{
+  color:red;
+}
+.main textarea{
+  width:95%;
+
+  height: 400rpx;
+  overflow: hidden;
+}
+.ad{
+  flex-direction: row;
+  justify-content:flex-start;
+  /* 用margin-top而不用top才可以实现相对母容器定位 否则是相对页面 */
+}
+.ad image{
+  width: 40rpx;
+}
+.ad text{
+  color:#777777;
+  font-size: 25rpx;
+}
+.submit{
+  width: 100%;
+  /* 定位到底部 */
+  position: absolute;
+  bottom: 50rpx;
+}
+.submit button{
+  /* width:700rpx ; */
+  background-color: #92B6D5;
+  color:white;
+}
+
+/* 下面是选择图片的样式 */
+/* pages/test/test.wxss */
+scroll-view{
+  height: 500rpx;
+}
+
+/* .upload-img-btn{
+  width: 100px;
+  height: 100px;
+} */
+.photo{
+  /* 排列居中 （此时是column方向） */
+  align-items: center;  
+  /* 让icon顶下去一点 */
+  padding-top: 20rpx;
+  width: 100%;
+  height: 300rpx;
+  background: white;
+}
+.img-box{
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30rpx;
+}
+.img,.upload-img-btn{
+  margin:13.656rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.img{
+  position: relative;
+  /* border: 1px dashed #92B6D5 ; */
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+
+.delete-btn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(0,0,0,.5);
+  text-align: center;
+  line-height: 30px;
+}

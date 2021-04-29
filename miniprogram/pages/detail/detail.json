@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "data-feed": "../../components/data-feed/data-feed"
+  },
+  "navigationBarTitleText": "详情"
+}

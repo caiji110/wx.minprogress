@@ -1,0 +1,53 @@
+<!--pages/background/background.wxml-->
+
+<import src="../temp/temp.wxml" />
+
+  <!-- normal是showArr传进来的 -->
+<view class="tips" wx:if="{{type!='normal'}}">
+    <button wx:if="{{!nowEdit}}" size="mini" style="width:200rpx" bindtap="changeEdit">编辑</button>
+
+    <button wx:else  size="mini" style="width:200rpx" bindtap="changeEdit">预览</button>
+    <button bindtap="popTips" size="mini">提示</button>
+    <button size="mini" style="width:200rpx" bindtap="submitEdit">提交</button>
+</view>
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500"   >
+   
+    <swiper-item  wx:for="{{swiperArr}}" wx:for-item="item" wx:key="*this">
+      <image bindlongpress="editSwiper" data-itemurl="{{item}}" data-itemindex="{{index}}"bindtap="previewImg" class="swiper-item" src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+    <!-- <swiper-item>
+      <image class="swiper-item" src="../../images/3 (2).jpg" mode="aspectFill"></image>
+    </swiper-item> -->
+
+  </swiper>
+ <!-- 精选内容 -->
+ <view class="formalUnit feature " bindtap="toHightLight" bindlongpress="editHightLight">
+    <image style="width:50rpx" id="love"  src="../../iconImg/love2.png" mode="widthFix"></image><text>精选资讯</text>
+    <view wx:if="{{!nowEdit}}" class="formal_img_container">
+      <view  wx:for="{{imgs}}" wx:item="item" wx:key="*this" class="formalImageSize">
+        
+        <image src="{{item}}"></image>
+      </view>
+    </view>
+    <view wx:else class="img-box">
+    <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+      <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+      <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+    </view>
+    <image  mode="aspectFill" class="upload-img-btn" bindtap="chooseImg" wx:if="{{imgs.length<3}}"
+      src="../../iconImg/addimg1.png"></image>
+</view>
+  </view>
+
+ 
+  <view>
+    <view class="kind fontInsideCenter">
+      <view bindtap="selectKind" wx:for="{{kindArr}}" wx:item="item" wx:key="*this" class="kindItem" bindlongpress="editKind" data-kind="{{item}}" data-index="{{index}}">
+        {{item}}</view>
+      <view wx:if="{{nowEdit}}" class="kindItem" bindtap="addKind"> + </view>
+    </view>
+  </view>
+
+  <view>
+    <data-feed id="feed" type='background'></data-feed>
+  </view>

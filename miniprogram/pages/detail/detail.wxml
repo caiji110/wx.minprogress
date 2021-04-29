@@ -1,0 +1,30 @@
+<scroll-view>
+<import src="../temp/temp.wxml" />
+<!-- <scroll-view scroll-y style="height:1300rpx"> -->
+    <!-- 这里开始展示信息 -->
+    <template is="msgUnit" data="{{...currentShow,ifDetail:true}}"/>
+</scroll-view>
+  <modal title="请添加微信联系！" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel" >
+    <view class="hhh">
+      <image class="image" src="../../iconImg/QR.jpg" mode='heightFix'></image>
+      <view>获取一手资讯</view>
+    <view>欢迎您加入【揭阳诚民服务站】</view>
+    <view style="color:black">点击确认即可复制微信号码！</view>
+    </view>
+    
+  </modal>
+<view class="submit" >
+  <view>
+    <button  size="mini" bindtap="tapLove">{{ifLoved?'已收藏':'收藏'}}</button>
+  </view>
+<view>
+    <button size="mini" bindtap="contactTap">现在联系</button>
+  </view>
+
+  <view> 
+    <button  size="mini" bindtap="wanna">我要发布</button>
+  </view>
+  <view>
+    <button  size="mini"  open-type="share">转发</button>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+/* pages/detail/detail.wxss */
+/* 让圆角融合到背景 */
+
+/* 
+.showUnit_contain_text{
+  height: auto;
+} */
+page{
+  padding-bottom:100rpx;
+}
+.submit{
+  box-sizing: border-box;
+ padding:0 35rpx 0 35rpx;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  position:fixed;
+  bottom:20rpx;
+}
+
+.submit button{
+  
+  margin:0;
+  background-color: #99caf5;
+  color:white;
+}
+.hhh{
+  display:flex;flex-direction:column; justify-content: center;
+  align-items: center;
+}

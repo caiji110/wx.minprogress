@@ -1,0 +1,18 @@
+<!--components/dataFeed.wxml-->
+<import src="../../pages/temp/temp.wxml" />
+<block wx:for="{{showArr}}" wx:item="item" wx:key="_id" class="" bindtap="toDetail">
+    <!-- dumb component -->
+    <!-- judge if background -->
+    <!-- data绑定数据 -->
+    <!-- 按钮有不同状态-->
+    <mp-slideview  data-data='{{item}}' bindbuttontap='slideTap' buttons="{{item.ifTop?slideButtonsTwo:slideButtonsOne}}" wx:if="{{type=='background'}}" >
+        <template  is="msgUnit" data="{{...item,index,ifDetail:false}}"  >
+            
+        </template>
+    </mp-slideview>
+    <template wx:else  is="msgUnit" data="{{...item,index,ifDetail:false}}"  >
+        
+    </template>
+
+    
+</block>

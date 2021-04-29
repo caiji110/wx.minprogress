@@ -1,0 +1,46 @@
+<!--pages/publish/publish.wxml-->
+
+<view class="publishItem">
+  <!-- 因为脑残picker 这个容器内全都套了view -->
+  <view>
+  选择类别:
+  </view>
+  <view  style="margin-left:50rpx;"> 
+    <picker bindchange="kindChange" value="{{kindIndex}}" range="{{kinds}}" >
+      <view class="kind">{{kind}}</view>
+    </picker>
+  </view>
+</view>
+<view class="publishItem" style="margin-top:20rpx;">
+  <view>
+  标题：
+  </view>
+  <input style="height:10rpx;" placeholder="请少于十个字"  bindinput="titleChange" maxlength="10" value="{{title}}"/>
+</view>
+<view class="main" style="margin-top:20rpx;">
+  <!-- 不限字数 -->
+  <textarea selectable="true" bindinput='containChange' maxlength="1000" placeholder="发布内容" value="{{contain}}"></textarea>
+  <view class="ad">
+    <image src="../../iconImg/ad.png" mode="widthFix" ></image>
+    <text>新亨</text>
+  </view>
+</view>
+
+<view class="phone" class="publishItem" style="margin-top:20rpx;">
+  <view>
+  联系方式：
+  </view>
+  <input maxlength="20" style="height:10rpx;" placeholder="请在此输入电话/微信"   type="number" bindinput="phoneChange" value="{{phoneNumber}}"/>
+</view>
+<scroll-view scroll-y="1" scroll-x="0">
+<view class="img-box" hidden="{{ifEdit}}" >
+    <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+        <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+    </view>
+    <image mode="aspectFill" class="upload-img-btn" bindtap="chooseImg" wx:if="{{imgs.length<9}}" src="../../iconImg/addimg1.png"></image>
+</view>
+</scroll-view>
+<view class="submit">
+  <button bindtap="submit">发布</button>
+</view>

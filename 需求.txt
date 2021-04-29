@@ -1,0 +1,22 @@
+1:解决请求只能拉取100条消息的分页处理问题
+在云函数设置计数器，当到达300条的时候返回数据（也有可能总数据小于三百条）
+需要根据时间降序去查询，否则300条之后的数据永远不会显示
+2:增加管理员认证
+用户输入密匙，云函数验证，若验证成功则将用户的openid加入到管理员账号并显示后台模块
+密匙存放在集合secretkey中,验证成功后将其openid添加到viplist中的vipopenidarr字段
+通过密匙认证后该按钮不再显示
+3:增加用户log记录
+每浏览一个模块，则将对应的__id添加到用户浏览数组中
+4:增加用户最近搜索
+
+5：登录授权存在问题
+调用这个api
+wx.getUserProfile({
+      desc: '用于完善会员资料',
+      success:(res) => {
+        this.setData({
+          img:res.userInfo.avatarUrl,
+          username:res.userInfo.nickName,  
+        })
+6 我新建的云函数：judgeserect,scanrecord,showscanarticle,
+findlove(用于查找该文章是否收藏过，在浏览记录进行跳转,最后没有实现，因为你写的代码收藏功能好像没有起效果)

@@ -1,0 +1,5 @@
+<!--miniprogram/pages/myscan/scan.wxml-->
+
+<!-- <scanrecord wx:for="{{article}}" bindtap="todetail" propdata = "{{item}}" wx:key="index" data-item="{{item}}"></scanrecord> -->
+
+<data-feed id="feed" bindtriggerLongTap="handleLongTap"></data-feed>

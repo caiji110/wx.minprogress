@@ -1,0 +1,101 @@
+/**index.wxss**/
+
+page{
+  width:100%;
+  height:100%;
+  background-color: #F3F6FC;
+}
+
+ .container{
+  padding-top: 30rpx;
+  padding-bottom: 10rpx;
+  height:25%; 
+  background: 	#8bbae4		;
+} 
+
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo button{
+  position: absolute;
+  top: 10%;
+}
+
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  top: 10%;
+}
+
+.userinfo-nickname {
+  color: #ffffff;
+}
+.tool{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;  */
+}
+.tool view{
+  display: flex;
+  flex-direction: row;
+  /* 垂直居中 */
+  align-items: center;
+  /* 间隔设置为0防止自动变形 */
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 100%;
+  height:100rpx ;
+  background: white;
+  margin-bottom: 20rpx;
+}
+.more{
+  position: absolute;
+  bottom:0;
+}
+.leftIcon {
+  margin-left: 20rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+.tool view text{
+  margin-left: 20rpx;
+  color:#92B6D5;
+}
+.enterIcon{
+  position: absolute;
+  height:36rpx;
+  width: 36rpx;
+  right:0;
+}
+.secretbox{
+ position: absolute;
+
+ left: 10%;
+  top: 40%;
+  z-index: 10;
+  width: 80%;
+  height: 400rpx;
+  box-shadow: 1px 1px 1px rgb(144, 198, 231);
+  background-color: rgb(144, 198, 231);
+}
+.secretbox input{
+  height: 60rpx;
+  display: inline-block;
+  background-color:#8bbae4 ;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  margin-left:20% ;
+}
+.btn{
+  color: white;
+  background-color: #8bbae4;
+  margin-bottom: 30rpx;
+}
+
+

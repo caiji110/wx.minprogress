@@ -1,0 +1,18 @@
+<!--components/scanrecord/scanrecord.wxml-->
+<view class="box"> 
+  <view class="img">
+    <image wx:if="{{item.imgArr[0]}}" src='{{item.imgArr[0]}}'></image>
+    <image wx:else src = '../../iconImg/notimg.png'>  </image>
+  </view>
+  <view class="right">
+    <view class="content">
+      <text>{{item.title}}</text>
+  <view>
+    {{item.contain}}
+  </view>
+    </view>
+  
+  </view> 
+
+</view>
+

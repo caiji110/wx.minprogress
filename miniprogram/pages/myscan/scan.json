@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "scanrecord":"../../components/scanrecord/scanrecord"
+  },
+  "navigationBarTitleText":"浏览记录"
+}

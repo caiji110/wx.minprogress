@@ -1,0 +1,30 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view>
+  <text>注意事项：如果输入渠道名称相同，会返回第一次输入该渠道名称的二维码，点击二维码图片可以进行放大保存</text>
+  
+</view>
+<text>点击生成二维码需要要稍等片刻，等待二维码生成（速度跟网络有关）</text>
+<text>备注和渠道名称建议用中文</text>
+<inputcode>
+</inputcode>
+
+<input type="text" placeholder="输入备注名称快速查询相关信息" model:value="{{value}}" />
+<button class="btn2" bindtap="finddata" >查询</button>
+<outputdata wx:if="{{newdata}}" propdata = "{{newdata}}"></outputdata>
+<view  class="output">
+  <button bindtap="dataupdate" class="btn2">点击刷新列表</button>
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">生成日期</view>
+ <view class="th">二维码</view>
+ <view class="th ">渠道名称</view>
+ <view class="th ">备注</view>
+ <view class="th ">引流情况</view>
+ </view>
+ 
+ <outputdata  wx:for="{{alldata}}" wx:key = "index" propdata = "{{item}}">
+  
+ </outputdata>
+</view>
+
+</view>

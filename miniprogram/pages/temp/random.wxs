@@ -1,0 +1,5 @@
+var random =  Math.ceil(Math.random()*5);
+
+
+
+module.exports.random = random;

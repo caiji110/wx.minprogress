@@ -1,0 +1,289 @@
+/**app.wxss**/
+page {
+  background: #F3F6FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  --organge:#FF9933;
+}
+
+.Display {}
+
+.notDisplay {
+  display: none;
+}
+/* .hover{ 
+  transition: color  .2s ease-out;
+ color:#707070;
+} */
+.fontInsideCenter {
+  text-align: center;
+  vertical-align: middle;
+  /* 要和div高度一致 */
+  /* line-height: 90px; */
+}
+.formalImageSize{
+  width: 181rpx;
+  height: 181rpx;
+}
+.topItems {
+  /* 统一字号 */
+  padding:0 30rpx 0 30rpx;
+  font-size: 14px;
+  background-color: #8bbae4;
+  /* height: 70rpx; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.location {
+  height: 70rpx;
+  width: 180rpx;
+  font-size: smaller;
+  color: #707070;
+  /* 地址垫高一点 */
+  padding-bottom: 10rpx;
+}
+
+.location image {
+  width: 50rpx;
+  position: relative;
+  top: 20%;
+  left: 10rpx;
+}
+
+.search {
+  /* box-shadow:0px 0px 2px #92B6D5; */
+  /* margin会影响该容器宽度 */
+
+  margin-left: 60rpx;
+  margin-right: 20rpx;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10rpx;
+  /* 这个高度不能改 因为input最小高度是55 */
+  height: 55rpx;
+
+}
+
+.search input {
+  margin-left: 55rpx;
+  background: white;
+  width: 60%;
+}
+
+
+.kind {
+  font-size:30rpx;
+  /* line-height: 20px; */
+  color:var(--organge);
+  padding:0 20rpx;
+  display: flex;
+  /* 定义横向并且换行 */
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* align-items: */
+  /* 同时设置两个轴的对齐方式 */
+  /* align-content:  space-around; */
+  /* 弹性盒子 没必要设置两个轴的对齐 */
+}
+
+.kindItem {
+  
+  
+  line-height: 60rpx;
+  border-radius: 10px;
+  background: #e6eef4;
+  box-shadow: 20px 20px 60px #c4cacf,
+    -20px -20px 60px #ffffff;
+
+
+  margin: 10rpx 15rpx 10rpx 15rpx;
+  width: 150rpx;
+  height: 60rpx;
+
+}
+
+.feature{
+  color:#8bbae4;
+  width:100%;
+  height: 250rpx;
+  background-color:#e6eef4;
+  padding:15rpx 60rpx 15rpx 60rpx;
+}
+
+.feature text{
+  position: relative;
+  top: -10rpx;
+  right:-15rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.formalUnit{
+   /* 写死宽度 */
+   width: 580rpx;
+   /* 左右居中 */
+   margin: 0 auto;
+   border-radius: 12px;
+   overflow: hidden;
+   /* 卡片内间距 */
+   padding: 30rpx 50rpx 30rpx 50rpx
+}
+
+.showUnit {
+  /* 设计扁平化 */
+  /* box-shadow:0px 0px 2px #92B6D5; */
+  
+  background-color: white;
+  padding-bottom: 20rpx;
+  /* 设置容器 */
+  display: flex;
+  flex-direction: column;
+  /* 边边 */
+ 
+  margin-bottom: 20rpx;
+  /* 设置优雅的行高 */
+  line-height: 60rpx;
+  /* 超过的隐藏 */
+
+}
+
+.showUnit_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.showUnit_head image {
+  /* 设置头像 */
+  border-radius: 40px;
+  width: 85rpx;
+  height: 85rpx;
+}
+
+.info {
+
+  display: flex;
+  flex-direction: column; 
+  /* 交叉轴对齐 */
+  align-items:flex-start;
+  position: relative;
+  top: -10rpx;
+  right: -15rpx;
+  /* width: 220rpx; */
+}
+
+.title {
+  font-size: 35rpx;
+}
+
+.time {
+  position: relative;
+  top: -7rpx;
+  font-size: 25rpx;
+  color: grey;
+}
+
+.showUnit_contain_title {
+  /* 类别 */
+  background: #8bbae4;
+  height: 30rpx;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  color: white;
+  font-weight: 600;
+  line-height: 30rpx;
+  /* margin-bottom: 10rpx; */
+}
+
+
+.showUnit_contain {
+  /*设置头像下面全部内容 */
+    /* 设定主要字体大小 */
+    font-size: 34rpx;
+}
+
+#hate {
+
+  width: 15rpx;
+  height: 15rpx;
+  position: relative;
+  bottom: 10rpx;
+  /*   transition:width 2s;
+	-webkit-transition:width 2s; /* Safari */
+}
+
+#love {
+  /* 爱心 */
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+.showUnit_contain_text_hidden {
+  height: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.formal_img_container {
+  /* 设置flex 方便排列图片*/
+ 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formal_img_container view {
+  /* width: 181rpx;
+  height: 181rpx; */
+  margin: 6rpx;
+}
+
+.formal_img_container  image {
+  width: 100%;
+  /* 必须  */
+  height: 100%;
+  /* 必须  */
+  object-fit: cover;
+}
+
+.showUnit_contain_tap {
+  /* 查看全文 */
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-top: 15rpx;
+  color: #8bbae4;
+}
+
+swiper image{
+  width: 100%;
+}
+swiper {
+  position: relative;
+  height: 350rpx;
+}
+.swiper_item {
+  width: 100%;
+}
+.foot{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.finished{
+  text-decoration:line-through
+}

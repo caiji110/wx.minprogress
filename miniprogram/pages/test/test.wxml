@@ -1,0 +1,11 @@
+<view>
+  <view class="page__bd">
+      <view class="weui-cells">
+          <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap"  >
+              <view style=" background-color:red;height:200rpx;width:300rpx;  ">sb</view>
+          </mp-slideview>
+      </view>  
+      </view>
+</view>
+<button bindtap="tap1">pull</button>
+<button bindtap="tap2">push</button>

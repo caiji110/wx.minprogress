@@ -1,0 +1,2 @@
+<!--pages/mylove/mylove.wxml-->
+<data-feed id="feed" bindtriggerLongTap="handleLongTap"></data-feed>
